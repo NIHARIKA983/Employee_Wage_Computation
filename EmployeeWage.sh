@@ -104,3 +104,18 @@ do
 done
 
 totalSalary=$(($totalEmpHrs*$EMP_RATE_PER_HR));
+
+
+#To Get Work Hours
+getWorkHours( ) {
+    case $empCheck in
+          $isPartTime)
+              workHours=4;;
+          $isFullTime)
+              workHours=8;;
+          *) workHours=0;;
+    esac
+    echo $workHours;
+}
+getWorkHours
+
